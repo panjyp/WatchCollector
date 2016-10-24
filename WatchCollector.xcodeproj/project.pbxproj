@@ -13,6 +13,8 @@
 		3EBE3FA21DB0206A00D26C98 /* WatchCollector.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3EBE3FA01DB0206A00D26C98 /* WatchCollector.xcdatamodeld */; };
 		3EBE3FA41DB0206A00D26C98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EBE3FA31DB0206A00D26C98 /* Assets.xcassets */; };
 		3EBE3FA71DB0206A00D26C98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EBE3FA51DB0206A00D26C98 /* LaunchScreen.storyboard */; };
+		3EBE3FAF1DB0250100D26C98 /* IMG_1955.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3EBE3FAE1DB0250100D26C98 /* IMG_1955.jpg */; };
+		3EBE3FB11DB025C900D26C98 /* WatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBE3FB01DB025C900D26C98 /* WatchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		3EBE3FA31DB0206A00D26C98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3EBE3FA61DB0206A00D26C98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3EBE3FA81DB0206A00D26C98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3EBE3FAE1DB0250100D26C98 /* IMG_1955.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_1955.jpg; sourceTree = "<group>"; };
+		3EBE3FB01DB025C900D26C98 /* WatchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +62,9 @@
 			children = (
 				3EBE3F991DB0206A00D26C98 /* AppDelegate.swift */,
 				3EBE3F9B1DB0206A00D26C98 /* ViewController.swift */,
+				3EBE3FAE1DB0250100D26C98 /* IMG_1955.jpg */,
 				3EBE3F9D1DB0206A00D26C98 /* Main.storyboard */,
+				3EBE3FB01DB025C900D26C98 /* WatchViewController.swift */,
 				3EBE3FA31DB0206A00D26C98 /* Assets.xcassets */,
 				3EBE3FA51DB0206A00D26C98 /* LaunchScreen.storyboard */,
 				3EBE3FA81DB0206A00D26C98 /* Info.plist */,
@@ -130,6 +136,7 @@
 				3EBE3FA71DB0206A00D26C98 /* LaunchScreen.storyboard in Resources */,
 				3EBE3FA41DB0206A00D26C98 /* Assets.xcassets in Resources */,
 				3EBE3F9F1DB0206A00D26C98 /* Main.storyboard in Resources */,
+				3EBE3FAF1DB0250100D26C98 /* IMG_1955.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,6 +149,7 @@
 			files = (
 				3EBE3F9C1DB0206A00D26C98 /* ViewController.swift in Sources */,
 				3EBE3FA21DB0206A00D26C98 /* WatchCollector.xcdatamodeld in Sources */,
+				3EBE3FB11DB025C900D26C98 /* WatchViewController.swift in Sources */,
 				3EBE3F9A1DB0206A00D26C98 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
