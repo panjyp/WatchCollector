@@ -10,30 +10,60 @@ import UIKit
 
 class WatchViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    @IBOutlet weak var addUpdateButton: UIButton!
     @IBOutlet weak var watchImageView: UIImageView!
     @IBOutlet weak var watchText: UITextField!
     
+    @IBOutlet weak var deleteButton: UIButton!
+    
     var imagePicker = UIImagePickerController()
+    var watch : Watch? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         imagePicker.delegate = self
         // Do any additional setup after loading the view.
+        
+        if watch != nil {
+            watchText.text = watch!.title
+            watchImageView.image = UIImage(data: watch!.image as! Data)
+            addUpdateButton.setTitle("Update", for: .normal)
+        } else {
+            deleteButton.isHidden = true
+        }
     }
 
     
     @IBAction func addTapped(_ sender: AnyObject) {
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
-        let watch = Watch(context: context)
-        watch.title = watchText.text
-        watch.image = UIImagePNGRepresentation(watchImageView.image!)! as NSData?
+        if watch != nil {
+            watch!.title = watchText.text
+            watch!.image = UIImagePNGRepresentation(watchImageView.image!)! as NSData?
+        } else {
+            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            let watch = Watch(context: context)
+            watch.title = watchText.text
+            watch.image = UIImagePNGRepresentation(watchImageView.image!)! as NSData?
+        }
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
         navigationController!.popViewController(animated: true)
     }
     
+    @IBAction func deleteTapped(_ sender: AnyObject) {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        context.delete(watch!)
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        navigationController!.popViewController(animated: true)
+   }
+    
+    
     @IBAction func cameraTapped(_ sender: AnyObject) {
+        imagePicker.sourceType = .camera
+        
+        present(imagePicker, animated: true, completion: nil)
+        
     }
     
     @IBAction func photosTapped(_ sender: AnyObject) {
